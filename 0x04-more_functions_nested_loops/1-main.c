@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	cha c;
+	char c;
 
 	c = '0';
 	printf("%c: %d\n", c, _isdigit(c));
