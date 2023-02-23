@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_numbers - print the numerals 0 to 9.
+ * print_most_numbers - print the numerals 0 to 9.
  *
  */
 
