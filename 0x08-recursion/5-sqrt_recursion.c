@@ -1,0 +1,29 @@
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * _sqrt_recursion - function to get the square root of given number
+ *
+ * @n: integer to get sqrt
+ *
+ * Return: the final answer.
+ *
+ **/
+
+int _sqrt_recursion(int n)
+{
+	if (n >= 1)
+	{
+		double x, f, i;
+
+		x = sqrt((double)n);
+		f = modf(x, &i);
+		if (f > 0)
+			return (-1);
+		else
+			return ((int)x);
+	}
+	else
+		return (-1);
+}
