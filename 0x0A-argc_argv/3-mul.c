@@ -9,19 +9,18 @@ int errmsg(void);
  * @argv: vector array of provided arguments.
  *
  * Return: exit status of environment.
- *
  **/
 
 int main(int argc, char *argv[])
 {
 	if (argc == 3)
 	{
-	int a, b;
+	int a, b, ans;
 
 	a = atoi(argv[1]);
 	b = atoi(argv[2]);
-
-	printf("%d\n", a * b);
+	ans = a * b;
+	printf("%d\n", ans);
 	}
 	else
 		errmsg();
