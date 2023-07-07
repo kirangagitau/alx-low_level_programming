@@ -35,6 +35,6 @@ int main(int argc, char *argv[])
 
 int errmsg(void)
 {
-	printf("error");
+	printf("Error");
 	return (1);
 }
