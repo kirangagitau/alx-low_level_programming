@@ -18,14 +18,14 @@ int main(int argc, char *argv[])
 
 	ans = 0;
 
-	if (argc != 2)
+	if (argc != 2) /* test condition for argument not exactly one*/
 	{
 		printf("Error\n");
 		return (1);
 	}
 	else
 	{
-		money = atoi(argv[1]);
+		money = atoi(argv[1]);/* parsing argv[1] to int money */
 	}
 	if (money < 0)
 	{
