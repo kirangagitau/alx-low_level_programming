@@ -10,14 +10,14 @@ int checker(char *str);
  * @argc: argument counts
  * @argv: argument vector
  *
- * Return: exit statu of system.
+ * Return: exit status of system.
  **/
 
 int main(int argc, char *argv[])
 {
 	if (argc < 2) /*condition when no arguments are given*/
 	{
-		printf("0");
+		printf("0\n");
 	}
 	else
 	{
@@ -34,12 +34,12 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				printf("Error");
+				printf("Error\n");
 				return (1);
 			}
 			counts++;
 		}
-		printf("%d", ans);
+		printf("%d\n", ans);
 	}
 	return (EXIT_SUCCESS);
 }
