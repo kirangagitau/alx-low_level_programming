@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 
 /**
  * main - entry point of the program
@@ -43,5 +42,5 @@ int main(int argc, char *argv[])
 		}
 	}
 	printf("%d\n", ans);
-	return (EXIT_SUCCESS);
+	return (0);
 }
