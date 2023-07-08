@@ -3,7 +3,6 @@
 #include <string.h>
 #include <ctype.h>
 
-int errmsg(void);
 int checker(char *str);
 
 /**
@@ -22,7 +21,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		int i, abs, ans, counts;
+		int abs, ans, counts;
 
 		ans = 0;
 		counts = 1;
