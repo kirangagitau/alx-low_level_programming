@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 {
 	if (argc < 2) /*condition when no arguments are given*/
 	{
-		printf("0\n");
+		printf("0");
 	}
 	else
 	{
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				printf("Error\n");
+				printf("Error");
 				return (1);
 			}
 			counts++;
