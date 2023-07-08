@@ -3,4 +3,5 @@
 
 int errmsg(void);
 int checker(char *str);
+int main(int argc, char *argv);
 #endif
