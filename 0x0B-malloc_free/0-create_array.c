@@ -16,10 +16,10 @@ char *create_array(unsigned int size, char c)
 	char *str;/* Declaring char pointer */
 
 	str = malloc(sizeof(char) * size); /* allocate memory of specified size */
-	if (size > 1 || str == NULL) /* if no size or array is given*/
+	if (size == 0 || str == NULL) /* if no size or array is given*/
 		return (NULL);
 
 	for (i = 0; i < size; i++)
 		str[i] = c;
-	return (0);
+	return (str);
 }
