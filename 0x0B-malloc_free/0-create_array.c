@@ -13,10 +13,10 @@
 char *create_array(unsigned int size, char c)
 {
 	unsigned int i; /* must much the iterator with argument type*/
-	char *s;/* Declaring char pointer */
+	char *str;/* Declaring char pointer */
 
-	s = malloc(sizeof(char) * size); /* allocate memory of specified size */
-	if (size > 1 || s == NULL) /* if no size or array is given*/
+	str = malloc(sizeof(char) * size); /* allocate memory of specified size */
+	if (size > 1 || str == NULL) /* if no size or array is given*/
 		return (NULL);
 
 	for (i = 0; i < size; i++)
