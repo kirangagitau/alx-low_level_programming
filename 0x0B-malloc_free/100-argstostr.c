@@ -19,7 +19,8 @@ char *argstostr(int ac, char **av)
 	p = 0;
 	if (ac == 0 || av == NULL) /* check for the null conditions */
 		return (NULL);
-	for (i = 0;  < ac; i++)
+
+	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j]; j++)
 			p++;
@@ -28,7 +29,6 @@ char *argstostr(int ac, char **av)
 	cons = malloc(sizeof(char) * p + 1); /* allocate enought mem */
 	if (cons == NULL)
 		return (NULL); /* if no argv given  */
-
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j]; j++)
@@ -38,7 +38,7 @@ char *argstostr(int ac, char **av)
 		}
 		if (cons[r] == '\0')
 		{
-			con[r++] = '\n'
+			cons[r++] = '\n';
 		}
 	}
 	return (cons); /* on success*/
