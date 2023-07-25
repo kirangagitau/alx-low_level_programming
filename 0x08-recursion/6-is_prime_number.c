@@ -16,7 +16,7 @@ int is_prime_number(int n)
 	{
 		prime = 0;
 	}
-	if (prime == 1 )
+	if (prime == 1)
 		return (1);
 	else
 		return (0);
