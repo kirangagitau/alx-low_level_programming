@@ -12,6 +12,8 @@ int is_prime_number(int n)
 	int prime;
 
 	prime = 1;
+	if (n = 1 || n = 7)
+		return (0);
 	if ((n % 2) == 0)
 	{
 		prime = 0;
