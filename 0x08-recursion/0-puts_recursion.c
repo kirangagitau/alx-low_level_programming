@@ -4,11 +4,16 @@
  * _puts_recursion - the function to write output
  * @s: given value to output
  *
+ * Return: Exit status, always 0 for success
  **/
 
 void _puts_recursion(char *s)
 {
 	if (*s)
-		write(1, s, 1);
+	{
+		_putchar(*s);
+		_puts_recursion(s+1); /*recursive function call*/
+	}
+	else
 		_putchar("\n");
 }
