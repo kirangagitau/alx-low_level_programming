@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - main functio (program entry)
+ * @argc: argument counts
+ * @argv: argument vecntor, pointer to array
+ *
+ * Return: exit status of the system
+ **/
+
+int main
