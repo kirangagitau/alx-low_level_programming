@@ -9,7 +9,7 @@
  **/
 list_t *get_nodeint_at_index(list_t *head, unsigned int index)
 {
-	unsigned int j=0;
+	unsigned int j = 0;
 	list_t *tem = head;
 
 	while (temp && j < index)
@@ -17,5 +17,5 @@ list_t *get_nodeint_at_index(list_t *head, unsigned int index)
 		temp = temp->next;
 		j++;
 	}
-	return (temp ? temp:NULL);
+	return (temp ? temp : NULL);
 }
