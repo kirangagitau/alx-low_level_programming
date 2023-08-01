@@ -7,10 +7,10 @@
  *
  * Return: pointe to node || null
  **/
-list_t *get_nodeint_at_index(list_t *head, unsigned int index)
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	unsigned int j = 0;
-	list_t *tem = head;
+	listint_t *temp = head;
 
 	while (temp && j < index)
 	{
