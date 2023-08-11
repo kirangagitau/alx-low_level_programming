@@ -3,26 +3,26 @@
 
 /**
  * read_textfile- Read text file print to STDOUT.
- * @filename: text file being read
- * @letters: number of letters to be read
- *
- * Return: w- actual number of bytes read and printed
+ * @filename: the text file to read
+ * @letters: no of letters to be read
+ * Return: w- actual number of bytes read
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buffer;
-	ssize_t filedes;
+	ssize_t fds;
 	ssize_t wr;
-	ssize_t src;
+	ssize_t t;
 
-	filedes = open(filename, O_RDONLY);
-	if (filedes == -1)
+	fds = open(filename, O_RDONLY);
+	if (fds == -1)
 		return (0);
-	buffer = malloc(sizeof(char) * letters);
-	src = read(fileddes, buffer, letters);
-	wr = write(STDOUT_FILENO, buffer, src);
-	/* FREE THE MEMORY AFTER  USE TO RETURN TO HEAP */
+
+	buf = malloc(sizeof(char) * letters);
+	t = read(fds, buffer, letters);
+	wr = write(STDOUT_FILENO, buffer, t);
+	/* free buffer after use */
 	free(buffer);
-	close(filedes);
+	close(fds);
 	return (wr);
 }
