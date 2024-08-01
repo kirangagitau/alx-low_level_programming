@@ -1,47 +1,47 @@
-#include "search_algos.h"
-#include <maths.h>
+#include <stdio.h>
+#include <math.h>
+
+int jump_search(int *array, size_t size, int value);
 
 /**
- * int jump_search - implement jump search algorithm
- * @array: pointer to first index of array
- * @size: length/size of the array
+ * jump_search - Function to perform Jump Search
+ * @array: pointer to index of first array element
+ * @size: length of array
  * @value: value to search for
  *
- * Description: This function searches for a value in a sorted
- * array of integers using the jump search algorithm and
- * returns the index of the value or -1 if value
- * is not found or if array is Null
- * Return: index of value or -1
+ *Return: index of value or -1
  **/
 
 int jump_search(int *array, size_t size, int value)
 {
-	int index, m, k, prev;
+	/* If the array is NULL or empty, return -1 */
+	if (array == NULL || size == 0)
+	return (-1);
 
-	if (size == 0 || array == NULL)
-		return (-1);
-	m = (int)sqrt((double)size);
-	k = 0;
-	prev = index = 0;
+	/* Calculate the jump step as the square root of the array size */
+	size_t step = (size_t)sqrt(size);
+	size_t prev = 0;
+	size_t curr = step;
 
-	do {
-		printf("Value checked array[%d] = [%d]\n", index, array[index]);
+	/* Find the block where the value may be present */
+	while (curr < size && array[curr - 1] < value)
+		{
+		prev = curr;
+		curr += step;
+		if (curr > size)
+			{
+			curr = size;
+			}
+		}
 
-		if (array[index] == value)
-			return (index);
-		k++;
-		prev = index;
-		index = k * m;
-	} while (index < (int)size && array[index] < value);
-
-	printf("Value found between indexes [%d] and [%d]\n", prev, index);
-
-	for (; prev <= index && prev < (int)size; prev++)
-	{
-		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
-		if (array[prev] == value)
-			return (prev);
-	}
-
+	/* Perform a linear search within the identified block */
+	for (size_t i = prev; i < curr; i++)
+		{
+		if (array[i] == value)
+			{
+			return (i);
+			}
+		}
+	/* If the value is not found, return -1 */
 	return (-1);
 }
